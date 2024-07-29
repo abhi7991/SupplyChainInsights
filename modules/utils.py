@@ -21,7 +21,7 @@ from graphdatascience import GraphDataScience
 wd = os.getcwd()
 from dotenv import load_dotenv
 import graph_build,create_plot_embeddings
-from modules import plot_vector_search,qa_bot
+from modules import plot_vector_search,qa_bot,visualiser
 import openai
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
@@ -57,10 +57,10 @@ def chat_bot(query):
     '''
     Chatbot with functions to answer questions related to the movies
     '''
-    tools=[plot_vector_search.vectorSearch,qa_bot.chat]
+    tools=[plot_vector_search.vectorSearch,qa_bot.chat,visualiser.visualise]
     functions = [format_tool_to_openai_function(f) for f in tools]
     model = ChatOpenAI(temperature=0).bind(functions=functions)
-    memory = ConversationBufferMemory(return_messages=True,memory_key="chat_history")
+    memory = ConversationBufferMemory(return_messages=True,memory_key="chat_history",run_intermediate_steps=True,return_direct=True)
 
     promptengg = """You are a helpful assistant specialized in providing insights and information related to supply chains, specifically focusing on the SupplyChainInsights application. Your expertise includes understanding and explaining the intricacies of supply chain data, including commodity shipments, pricing trends, and logistics. You should only respond to queries related to:
 
@@ -80,7 +80,11 @@ def chat_bot(query):
     chain = RunnablePassthrough.assign(
         agent_scratchpad = lambda x: format_to_openai_functions(x["intermediate_steps"])
     ) | prompt | model | OpenAIFunctionsAgentOutputParser()
-    qa = AgentExecutor(agent=chain, tools=tools, verbose=True, memory=memory)
+    qa = AgentExecutor(agent=chain, tools=tools, verbose=True, memory=memory,return_intermediate_steps=True)
     result = qa.invoke({"input": query})
-    answer = result['output'] 
+    if result['intermediate_steps'][0][0].tool=='visualise':
+        answer = result['intermediate_steps'][0][-1]
+        answer['Tool'] = 'visualise'
+    else:
+        answer = result['output'] 
     return answer   

@@ -94,7 +94,7 @@ class SearchInput(BaseModel):
 @tool(args_schema=SearchInput)
 def chat(que:str)->str:
     
-    """Conversing with the Knowledge graph of movies, and will generate cypher queries to get answers"""
+    """Conversing with the Knowledge graph of Supply Chain, and will generate cypher queries to get answers"""
     
     r = chain.invoke(que)
     # print(r)
