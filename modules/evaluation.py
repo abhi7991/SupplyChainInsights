@@ -59,7 +59,7 @@ def chat_bot(query):
     tools=[plot_vector_search.vectorSearch]
     functions = [format_tool_to_openai_function(f) for f in tools]
     model = ChatOpenAI(temperature=0).bind(functions=functions)
-    memory = ConversationBufferMemory(return_messages=True,memory_key="chat_history")
+    memory = ConversationBufferMemory(return_messages=True,memory_key="chat_history",run_intermediate_steps=True,return_direct=True)
 
     promptengg = "You are a helpful assistant and you shouldnt talk about anything except World Cinema. Only respond to queries related to movies, movie recommendations, or movie genres"
 

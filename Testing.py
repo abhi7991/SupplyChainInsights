@@ -9,9 +9,11 @@ import os
 import sys
 file_dir = os.path.dirname(__file__)
 sys.path.append(file_dir)
-from modules import utils
+from modules import utils,ragas_eval
+import pandas as pd
 
 
-utils.graph_init()
-
-print(utils.chat_bot("I am looking for products which contain OraQuick Advance ?"))
+a = pd.read_csv(os.getcwd()+"/evaluation_results.csv")
+#utils.graph_init()
+print(ragas_eval.getEval(a))
+#print(utils.chat_bot("Give me All the countries our products get sent to??"))

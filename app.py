@@ -5,14 +5,15 @@ Created on Wed Jul  3 13:13:14 2024
 @author: abhis
 """
 
-
+import nest_asyncio
+nest_asyncio.apply()
 import streamlit as st
 import requests
 from dotenv import load_dotenv
 import os
 from datetime import datetime,timedelta
 import pandas as pd
-from modules import utils
+from modules import utils,ragas_eval
 import numpy as np
 from openai import OpenAI
 import seaborn as sns
@@ -67,7 +68,7 @@ def detect_plot_type(query):
         'Bar Chart': ['bar chart', 'bar plot', 'bar graph','bar'],
         'Scatter Plot': ['scatter plot', 'scatter graph', 'xy plot'],
         'Distribution Plot': ['distribution plot', 'histogram', 'density plot'],
-        'Count Plot': ['count plot', 'count graph', 'frequency plot','count']
+        'Bar Chart': ['count plot', 'count graph', 'frequency plot','count']
     }
     
     query_lower = query.lower()
@@ -81,6 +82,21 @@ def detect_plot_type(query):
 def home_page():
     # Set background image
     st.markdown("# SupplyChainInsights")
+
+# Page to display data table
+def data_table_page():
+    st.title("Data Table Page")
+    df = pd.read_csv(os.getcwd()+"//evaluation_results.csv")
+    df1 = ragas_eval.getEval(df)
+    print(df1)
+    # try:
+    #     df = pd.read_csv(os.getcwd()+"//evaluation_results.csv")
+    #     df = ragas_eval.getEval(df)
+    # except:
+    #     df = pd.DataFrame({"Note : ":"You havent asked any queries yet"},index=[0])
+
+    st.write("Here is how good the responses were")
+    st.dataframe(df1)
         
 def generatePlot(input_data):
     
@@ -130,9 +146,9 @@ def generatePlot(input_data):
         plt.title(f'{plot_type} of {y_axis} vs {x_axis}', fontsize=12)
         plt.xlabel(x_axis, fontsize=10)
         plt.ylabel(y_axis, fontsize=10)
-        st.image(fig, caption="Visualization", use_column_width=True)
-        print("ALL GOOD WE ARE HERE")
-        #st.pyplot(fig)
+        #st.image(fig, caption="Visualization", use_column_width=True)
+        
+        st.pyplot(fig)
     #.pyplot(fig)   
         
 def chat_interface_page():
@@ -184,11 +200,11 @@ def chat_interface_page():
             st.markdown(prompt)
             
         response = utils.chat_bot(prompt)   
-        if type(response)==dict:
+        if response['Tool'] == 'visualise':
             print("RIGHT BEFORE THE IMAGE")
             generatePlot(response)
         else:
-            st.session_state.messages.append({"role": "assistant", "content": response})
+            st.session_state.messages.append({"role": "assistant", "content": response['output']})
             # Display assistant response in chat message container
             with st.chat_message("assistant"):
                 st.markdown(response)
@@ -207,6 +223,19 @@ def main():
     st.set_page_config(
         page_title="SupplyChainInsights",page_icon="\U0001F4E6"+"\U0001F30D" ,layout="wide"
     )
+
+    # Sidebar navigation
+    st.sidebar.title("Navigation")
+    page = st.sidebar.radio("Go to", ["Home", "Monitor Performance"])
+
+    # Map the selected page to the corresponding function
+    if page == "Home":
+        home_page()
+    elif page == "Monitor Performance":
+        # st.set_page_config(
+        #     page_title="Metrics of this AI Application",page_icon="\U0001F4E6"+"\U0001F30D" ,layout="wide"
+        # )        
+        data_table_page()
 
     page = pages['Question? Chat it out']
     page()

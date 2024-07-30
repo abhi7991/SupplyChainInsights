@@ -7,7 +7,25 @@ Created on Tue Jul  2 10:16:16 2024
 
 import os
 import sys
-
+from langchain_openai import ChatOpenAI
+import pandas as pd
+import os
+import streamlit as st
+import requests
+import time
+from dotenv import load_dotenv
+import os
+from datetime import datetime,timedelta
+import pandas as pd
+import numpy as np
+from openai import OpenAI
+from datasets import Dataset 
+from ragas.metrics import faithfulness
+from ragas import evaluate
+import time
+from datasets import Dataset 
+from ragas.metrics import faithfulness
+from ragas import evaluate
 file_dir = os.path.dirname(__file__)
 sys.path.append(file_dir) 
 import pandas as pd
@@ -52,7 +70,36 @@ def graph_init():
      print("Graph and Embeddings already Created - Check modules.utils to enable")
      #graph_build.create_logistics_graph()
      #create_plot_embeddings.create_plot_embeddings()
-    
+
+def getEval(response,query):
+
+    answer = response['output']
+    context = response['intermediate_steps'][0][1]  
+    data_samples = {
+        'question': [query],
+        'answer': [answer],
+        'contexts' : [[str(context)]],
+    }     
+    # print("Here is the " , data_samples) 
+    # dataset = Dataset.from_dict(data_samples)
+    # time.sleep(0.1)
+    # score = evaluate(dataset,metrics=[faithfulness,answer_relevancy])
+    # Convert the score to a pandas DataFrame
+    # score_df = score.to_pandas()
+    score_df = pd.DataFrame(data_samples)
+    # Define the path to your CSV file
+    csv_file_path = os.getcwd()+"//evaluation_results.csv"
+
+    # Save the results to the CSV file, appending if it already exists
+    if not os.path.isfile(csv_file_path):
+        # If file doesn't exist, create it and write the header
+        score_df.to_csv(csv_file_path, index=False)
+    else:
+        # If file exists, append without writing the header
+        score_df.to_csv(csv_file_path, mode='a', header=False, index=False)
+
+
+
 def chat_bot(query):
     '''
     Chatbot with functions to answer questions related to the movies
@@ -86,5 +133,7 @@ def chat_bot(query):
         answer = result['intermediate_steps'][0][-1]
         answer['Tool'] = 'visualise'
     else:
-        answer = result['output'] 
+        answer = result#['output']
+        answer['Tool'] = 'Others'
+        metrics = getEval(result, query) 
     return answer   
