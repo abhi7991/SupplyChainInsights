@@ -1,0 +1,34 @@
+database,schema,structured_schema
+neo4j,"Node properties:
+- **Product**
+  - `line_item_quantity`: STRING Example: ""19""
+  - `pack_price`: STRING Example: ""29.0""
+  - `molecule_test_type`: STRING Example: ""HIV, Reveal G3 Rapid HIV-1 Antibody Test""
+  - `unit_of_measure_per_pack`: STRING Example: ""30""
+  - `shipment_number`: STRING Example: ""ASN-8""
+  - `pid`: INTEGER Min: 1, Max: 16
+  - `item_description`: STRING Example: ""HIV, Reveal G3 Rapid HIV-1 Antibody Test, 30 Tests""
+  - `project_code`: STRING Example: ""100-CI-T01""
+  - `price_quote`: STRING Example: ""Pre-PQ Process""
+- **Country**
+  - `name`: STRING Example: ""Afghanistan""
+- **Vendor**
+  - `name`: STRING Example: ""ABBOTT LABORATORIES (PUERTO RICO)""
+- **Brand**
+  - `name`: STRING Example: ""Aluvia""
+- **Product_Group**
+  - `name`: STRING Available options: ['ACT', 'ANTM', 'ARV', 'HRDT', 'MRDT']
+- **Sub_Class**
+  - `name`: STRING Available options: ['ACT', 'Adult', 'HIV test', 'HIV test - Ancillary', 'Malaria', 'Pediatric']
+- **Office**
+  - `name`: STRING Available options: ['Ethiopia Field Office', 'Haiti Field Office', 'PMO - US', 'South Africa Field Office']
+Relationship properties:
+- **WEIGHT**
+  - `weight: FLOAT` Example: ""0.0""
+The relationships:
+(:Product)-[:WEIGHT]->(:Country)
+(:Product)-[:BRAND]->(:Brand)
+(:Product)-[:GROUP]->(:Product_Group)
+(:Product)-[:SUB_CLASS]->(:Sub_Class)
+(:Vendor)-[:VENDOR]->(:Product)
+(:Office)-[:MANAGED_BY]->(:Product)","{'node_props': {'Product': [{'property': 'line_item_quantity', 'type': 'STRING', 'values': ['19', '1000', '500', '31920', '38000']}, {'property': 'pack_price', 'type': 'STRING', 'values': ['29.0', '6.2', '80.0', '3.99', '3.2']}, {'property': 'embedding', 'type': 'LIST', 'max_size': 1536, 'min_size': 1536}, {'property': 'molecule_test_type', 'type': 'STRING', 'values': ['HIV, Reveal G3 Rapid HIV-1 Antibody Test', 'Nevirapine', 'HIV 1/2, Determine Complete HIV Kit', 'Lamivudine', 'Stavudine']}, {'property': 'unit_of_measure_per_pack', 'type': 'STRING', 'values': ['30', '240', '100', '60']}, {'property': 'shipment_number', 'type': 'STRING', 'values': ['ASN-8', 'ASN-85', 'ASN-14', 'ASN-50', 'ASN-55']}, {'property': 'pid', 'type': 'INTEGER', 'min': '1', 'max': '16', 'distinct_count': 5}, {'property': 'item_description', 'type': 'STRING', 'values': ['HIV, Reveal G3 Rapid HIV-1 Antibody Test, 30 Tests', 'Nevirapine 10mg/ml, oral suspension, Bottle, 240 m', 'HIV 1/2, Determine Complete HIV Kit, 100 Tests', 'Lamivudine 150mg, tablets, 60 Tabs', 'Stavudine 30mg, capsules, 60 Caps']}, {'property': 'project_code', 'type': 'STRING', 'values': ['100-CI-T01', '108-VN-T01']}, {'property': 'price_quote', 'type': 'STRING', 'values': ['Pre-PQ Process']}], 'Country': [{'property': 'name', 'type': 'STRING', 'values': ['Afghanistan', 'Angola', 'Belize', 'Benin', 'Botswana', 'Burkina Faso', 'Burundi', 'Cameroon', 'Congo, DRC', ""Côte d'Ivoire""], 'distinct_count': 43}], 'Vendor': [{'property': 'name', 'type': 'STRING', 'values': ['ABBOTT LABORATORIES (PUERTO RICO)', 'ABBOTT LOGISTICS B.V.', 'ABBVIE LOGISTICS (FORMERLY ABBOTT LOGISTICS BV)', 'ABBVIE, SRL (FORMALLY ABBOTT LABORATORIES INTERNAT', 'ACCESS BIO, INC.', 'ACCOUN NIGERIA LIMITED', 'ACOUNS NIGERIA LTD', 'ACTION MEDEOR E.V.', 'AHN (PTY) LTD (AKA UCB (S.A.)', 'AMSTELFARMA B.V.'], 'distinct_count': 73}], 'Brand': [{'property': 'name', 'type': 'STRING', 'values': ['Aluvia', 'Atripla', 'Bioline', 'Bundi', 'Capillus', 'CareStart', 'Clearview', 'Coartem', 'Colloidal Gold', 'Combivir'], 'distinct_count': 48}], 'Product_Group': [{'property': 'name', 'type': 'STRING', 'values': ['ACT', 'ANTM', 'ARV', 'HRDT', 'MRDT'], 'distinct_count': 5}], 'Sub_Class': [{'property': 'name', 'type': 'STRING', 'values': ['ACT', 'Adult', 'HIV test', 'HIV test - Ancillary', 'Malaria', 'Pediatric'], 'distinct_count': 6}], 'Office': [{'property': 'name', 'type': 'STRING', 'values': ['Ethiopia Field Office', 'Haiti Field Office', 'PMO - US', 'South Africa Field Office'], 'distinct_count': 4}]}, 'rel_props': {'WEIGHT': [{'property': 'weight', 'type': 'FLOAT', 'values': ['0.0']}]}, 'relationships': [{'start': 'Product', 'type': 'WEIGHT', 'end': 'Country'}, {'start': 'Product', 'type': 'BRAND', 'end': 'Brand'}, {'start': 'Product', 'type': 'GROUP', 'end': 'Product_Group'}, {'start': 'Product', 'type': 'SUB_CLASS', 'end': 'Sub_Class'}, {'start': 'Vendor', 'type': 'VENDOR', 'end': 'Product'}, {'start': 'Office', 'type': 'MANAGED_BY', 'end': 'Product'}], 'metadata': {'constraint': [{'id': 4, 'name': 'unique_brand_id', 'type': 'NODE_KEY', 'entityType': 'NODE', 'labelsOrTypes': ['Brand'], 'properties': ['name'], 'ownedIndex': 'unique_brand_id', 'propertyType': None}, {'id': 11, 'name': 'unique_class_id', 'type': 'NODE_KEY', 'entityType': 'NODE', 'labelsOrTypes': ['Sub_Class'], 'properties': ['name'], 'ownedIndex': 'unique_class_id', 'propertyType': None}, {'id': 9, 'name': 'unique_country_id', 'type': 'NODE_KEY', 'entityType': 'NODE', 'labelsOrTypes': ['Country'], 'properties': ['name'], 'ownedIndex': 'unique_country_id', 'propertyType': None}, {'id': 13, 'name': 'unique_office_id', 'type': 'NODE_KEY', 'entityType': 'NODE', 'labelsOrTypes': ['Office'], 'properties': ['name'], 'ownedIndex': 'unique_office_id', 'propertyType': None}, {'id': 6, 'name': 'unique_pg_id', 'type': 'NODE_KEY', 'entityType': 'NODE', 'labelsOrTypes': ['Product_Group'], 'properties': ['name'], 'ownedIndex': 'unique_pg_id', 'propertyType': None}, {'id': 16, 'name': 'unique_product_id', 'type': 'NODE_KEY', 'entityType': 'NODE', 'labelsOrTypes': ['Product'], 'properties': ['pid'], 'ownedIndex': 'unique_product_id', 'propertyType': None}, {'id': 3, 'name': 'unique_vendor_id', 'type': 'NODE_KEY', 'entityType': 'NODE', 'labelsOrTypes': ['Vendor'], 'properties': ['name'], 'ownedIndex': 'unique_vendor_id', 'propertyType': None}], 'index': [{'label': 'Brand', 'properties': ['name'], 'size': 48, 'type': 'RANGE', 'valuesSelectivity': 1.0, 'distinctValues': 48.0}, {'label': 'Country', 'properties': ['name'], 'size': 43, 'type': 'RANGE', 'valuesSelectivity': 1.0, 'distinctValues': 43.0}, {'label': 'Office', 'properties': ['name'], 'size': 4, 'type': 'RANGE', 'valuesSelectivity': 1.0, 'distinctValues': 4.0}, {'label': 'Product', 'properties': ['pid'], 'size': 10324, 'type': 'RANGE', 'valuesSelectivity': 1.0, 'distinctValues': 10324.0}, {'label': 'Product_Group', 'properties': ['name'], 'size': 5, 'type': 'RANGE', 'valuesSelectivity': 1.0, 'distinctValues': 5.0}, {'label': 'Sub_Class', 'properties': ['name'], 'size': 6, 'type': 'RANGE', 'valuesSelectivity': 1.0, 'distinctValues': 6.0}, {'label': 'Vendor', 'properties': ['name'], 'size': 73, 'type': 'RANGE', 'valuesSelectivity': 1.0, 'distinctValues': 73.0}]}}"

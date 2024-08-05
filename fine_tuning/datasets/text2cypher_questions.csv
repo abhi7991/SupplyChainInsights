@@ -1,0 +1,213 @@
+question,type,database
+What are the top 5 products managed by the Haiti Field Office?,Simple Retrieval Queries,neo4j
+"List the top 3 products with a molecule test type of 'HIV 1/2, Determine Complete HIV Kit'.",Simple Retrieval Queries,neo4j
+Which 3 products have a pack price greater than 50?,Simple Retrieval Queries,neo4j
+Identify the top 5 countries where products with a line item quantity greater than 100 are shipped.,Simple Retrieval Queries,neo4j
+Which vendors supply the top 3 products with the highest pack prices?,Simple Retrieval Queries,neo4j
+What are the top 3 brands associated with products managed by the PMO - US office?,Simple Retrieval Queries,neo4j
+List the top 3 product groups associated with products having a unit of measure per pack greater than 50.,Simple Retrieval Queries,neo4j
+Which 3 sub classes are assigned to products with a shipment number starting with 'ASN'?,Simple Retrieval Queries,neo4j
+Which products with a price quote of 'Pre-PQ Process' are managed by the South Africa Field Office?,Simple Retrieval Queries,neo4j
+List the top 5 products with a line item quantity less than 300.,Simple Retrieval Queries,neo4j
+What are the top 3 countries linked by WEIGHT relationship to products with a molecule test type of 'HIV'?,Simple Retrieval Queries,neo4j
+Which 3 offices manage products with a project code like '102-%'?,Simple Retrieval Queries,neo4j
+Identify the top 3 products under the product group 'ARV' managed by any office.,Simple Retrieval Queries,neo4j
+What are the top 3 brands of products that have a 'Pediatric' subclass?,Simple Retrieval Queries,neo4j
+Which vendors are linked to the top 3 products having an item description that includes 'tablets'?,Simple Retrieval Queries,neo4j
+List the top 5 product groups for products with a shipment number ending in '-128'.,Simple Retrieval Queries,neo4j
+Which 3 sub classes are most common among products with a line item quantity over 500?,Simple Retrieval Queries,neo4j
+List the top 3 countries where products with a 'HIV test' subclass are shipped.,Simple Retrieval Queries,neo4j
+What are the names of the top 3 vendors who supply products to the Ethiopia Field Office?,Simple Retrieval Queries,neo4j
+Which offices manage the top 5 products with the highest pack prices?,Simple Retrieval Queries,neo4j
+Identify the top 3 brands linked to products with a molecule test type including 'HIV'.,Simple Retrieval Queries,neo4j
+Which 3 product groups are most frequently associated with products having a pack price less than 30?,Simple Retrieval Queries,neo4j
+List the top 3 sub classes for products with a price quote status of 'Pre-PQ Process'.,Simple Retrieval Queries,neo4j
+What are the top 3 countries receiving products with a unit of measure per pack of 60?,Simple Retrieval Queries,neo4j
+Which 3 vendors supply products that are managed by the Haiti Field Office?,Simple Retrieval Queries,neo4j
+Identify the top 3 products from the 'ANTM' product group managed by any office.,Simple Retrieval Queries,neo4j
+What are the top 3 brands associated with the most expensive products based on pack price?,Simple Retrieval Queries,neo4j
+Which 3 offices manage the most products with a shipment number starting with 'DN'?,Simple Retrieval Queries,neo4j
+List the top 5 product groups for products with a molecule test type that includes 'Abacavir'.,Simple Retrieval Queries,neo4j
+Which 3 sub classes are linked to the most products with a project code starting with '100-CI'?,Simple Retrieval Queries,neo4j
+What are the top 3 countries linked to products with a pack price of 44.05?,Simple Retrieval Queries,neo4j
+Which 3 vendors supply products with the highest line item quantities?,Simple Retrieval Queries,neo4j
+Identify the top 3 brands linked to products managed by the South Africa Field Office.,Simple Retrieval Queries,neo4j
+Which 3 product groups are linked to products with an item description including 'HIV Kit'?,Simple Retrieval Queries,neo4j
+List the top 5 sub classes for products managed by the PMO - US office.,Simple Retrieval Queries,neo4j
+What are the names of the top 3 vendors supplying products to countries with a shipment number like 'ASN-%'?,Simple Retrieval Queries,neo4j
+Which offices manage the top 5 products with the smallest unit of measure per pack?,Simple Retrieval Queries,neo4j
+Identify the top 3 brands of products that have a project code like '102-%'.,Simple Retrieval Queries,neo4j
+Which 3 product groups are most frequently linked to products with a line item quantity less than 200?,Simple Retrieval Queries,neo4j
+List the top 3 sub classes for products with a shipment number ending in '-71'.,Simple Retrieval Queries,neo4j
+What are the top 3 countries receiving products with a molecule test type of 'Abacavir'?,Simple Retrieval Queries,neo4j
+Which 3 vendors supply products with a price quote of 'Pre-PQ Process'?,Simple Retrieval Queries,neo4j
+Identify the top 3 brands linked to products with a unit of measure per pack of 100.,Simple Retrieval Queries,neo4j
+Which 3 product groups are linked to the most products managed by the Ethiopia Field Office?,Simple Retrieval Queries,neo4j
+List the top 5 sub classes for products with a pack price greater than 75.,Simple Retrieval Queries,neo4j
+What are the names of the top 3 vendors supplying products with a line item quantity greater than 1000?,Simple Retrieval Queries,neo4j
+Which offices manage the top 3 products with a project code starting with '100-CI'?,Simple Retrieval Queries,neo4j
+Identify the top 3 brands of products managed by the Haiti Field Office.,Simple Retrieval Queries,neo4j
+Which 3 product groups are most common among products with a molecule test type of 'HIV'?,Simple Retrieval Queries,neo4j
+List the top 3 sub classes for products managed by any office with a project code like '102-%'.,Simple Retrieval Queries,neo4j
+What are the top 3 countries linked to products with a unit of measure per pack less than 60?,Simple Retrieval Queries,neo4j
+Which 3 vendors supply the most products with a shipment number starting with 'DN'?,Simple Retrieval Queries,neo4j
+Identify the top 3 brands linked to products with a line item quantity over 500.,Simple Retrieval Queries,neo4j
+Which 3 product groups are linked to products with a shipment number like 'ASN-%'?,Simple Retrieval Queries,neo4j
+List the top 5 sub classes for products with a price quote of 'Pre-PQ Process'.,Simple Retrieval Queries,neo4j
+What are the names of the top 3 vendors supplying products with a pack price less than 30?,Simple Retrieval Queries,neo4j
+Which offices manage the most products with a molecule test type of 'HIV'?,Simple Retrieval Queries,neo4j
+Which products have a pack price greater than $50 and are managed by the PMO - US office?,Complex Retrieval Queries,neo4j
+List the top 5 products by line item quantity that are associated with the HIV test subclass.,Complex Retrieval Queries,neo4j
+What are the first 3 product groups associated with products that have a shipment number starting with 'DN'?,Complex Retrieval Queries,neo4j
+Identify products that are linked to the brand 'Aluvia' and have a molecule test type containing 'HIV'.,Complex Retrieval Queries,neo4j
+Which vendors supply products with a pack price less than $100?,Complex Retrieval Queries,neo4j
+What are the names of the countries linked to products with a 'unit_of_measure_per_pack' greater than 50?,Complex Retrieval Queries,neo4j
+List all products with a project code starting with '100' and having a 'price_quote' status of 'Pre-PQ Process'.,Complex Retrieval Queries,neo4j
+What are the top 3 most common sub classes for products managed by the Ethiopia Field Office?,Complex Retrieval Queries,neo4j
+Identify products that are linked to the 'ARV' product group and have a shipment number ending with '8'.,Complex Retrieval Queries,neo4j
+Which office manages the product with the highest line item quantity?,Complex Retrieval Queries,neo4j
+List the top 5 brands associated with products that have a 'unit_of_measure_per_pack' of 100.,Complex Retrieval Queries,neo4j
+What are the first 3 products that have a molecule test type related to 'HIV' and are managed by an office in Haiti?,Complex Retrieval Queries,neo4j
+What are the names of the vendors supplying products to the South Africa Field Office?,Complex Retrieval Queries,neo4j
+How many different product groups are associated with the products that have a shipment number starting with 'ASN'?,Complex Retrieval Queries,neo4j
+Which countries receive products with a 'price_quote' status of 'Pre-PQ Process'?,Complex Retrieval Queries,neo4j
+What are the top 5 products with the highest pack price managed by any field office?,Complex Retrieval Queries,neo4j
+Identify the product groups linked to products with a 'line_item_quantity' less than 20.,Complex Retrieval Queries,neo4j
+What are the first 3 products with a pid greater than 100 and linked to the 'HIV test' sub class?,Complex Retrieval Queries,neo4j
+Which brands are linked to products with a 'project_code' that starts with '102'?,Complex Retrieval Queries,neo4j
+List all offices that manage products associated with the 'ANTM' product group.,Complex Retrieval Queries,neo4j
+Which products are managed by the Haiti Field Office?,Simple Aggregation Queries,neo4j
+List all products related to the vendor 'ABBOTT LABORATORIES (PUERTO RICO)'.,Simple Aggregation Queries,neo4j
+What are the names of the countries associated with products having more than 1000 units of line item quantity?,Simple Aggregation Queries,neo4j
+Which products are categorized under the Product_Group 'ARV'?,Simple Aggregation Queries,neo4j
+Find the top 3 brands by the number of products they are associated with.,Simple Aggregation Queries,neo4j
+What are the top 5 most expensive products based on pack price?,Simple Aggregation Queries,neo4j
+Identify all products that have 'HIV test' as their sub class.,Simple Aggregation Queries,neo4j
+What are the project codes for products managed by the PMO - US office?,Simple Aggregation Queries,neo4j
+List all product IDs that have been shipped more than once.,Simple Aggregation Queries,neo4j
+Which offices manage products with a price quote of 'Pre-PQ Process'?,Simple Aggregation Queries,neo4j
+How many products are there in each product group?,Simple Aggregation Queries,neo4j
+Which product groups are associated with products having a shipment number starting with 'ASN'?,Simple Aggregation Queries,neo4j
+Identify the products with a unit of measure per pack greater than 50.,Simple Aggregation Queries,neo4j
+Which Sub_Class categories are linked to more than 5 products?,Simple Aggregation Queries,neo4j
+List all the products that have been shipped under shipment number 'ASN-608'.,Simple Aggregation Queries,neo4j
+Find products that are linked to the brand 'Aluvia'.,Simple Aggregation Queries,neo4j
+What are the distinct item descriptions available for products managed by the Ethiopia Field Office?,Simple Aggregation Queries,neo4j
+Which vendors supply products to more than one country?,Simple Aggregation Queries,neo4j
+Show all products which have a molecule test type containing 'HIV 1/2'.,Simple Aggregation Queries,neo4j
+How many different offices manage products within the 'HIV test' sub class?,Simple Aggregation Queries,neo4j
+Which products are managed by the Haiti Field Office and have a pack price greater than $100?,Pathfinding Queries,neo4j
+What are the names of vendors that supply products to the Ethiopia Field Office?,Pathfinding Queries,neo4j
+List all products with a molecule test type containing 'HIV' that are managed by the PMO - US office.,Pathfinding Queries,neo4j
+Which brands are associated with products that have a pack price less than $50?,Pathfinding Queries,neo4j
+What are the names of countries where products with a pack price over $200 are sent?,Pathfinding Queries,neo4j
+How many products under the ARV group have a line item quantity greater than 1000?,Pathfinding Queries,neo4j
+Identify products that are of the 'HIV test' sub class and have a unit of measure per pack of 100.,Pathfinding Queries,neo4j
+Which vendors supply products with a project code starting with '102'?,Pathfinding Queries,neo4j
+Find the top 5 products managed by the South Africa Field Office based on their pack price.,Pathfinding Queries,neo4j
+List all product groups associated with products that have a shipment number 'ASN-608'.,Pathfinding Queries,neo4j
+What are the names of the brands associated with products that have a molecule test type including 'Efavirenz'?,Pathfinding Queries,neo4j
+Which office manages products with a shipment number 'DN-52'?,Pathfinding Queries,neo4j
+List all countries to which products grouped under MRDT are shipped.,Pathfinding Queries,neo4j
+Show the first 3 products of the 'Pediatric' sub class managed by the Haiti Field Office.,Pathfinding Queries,neo4j
+What are the names of products with a project code '100-CI-T01'?,Pathfinding Queries,neo4j
+Which products have both an item description involving 'Tablets' and a project code ending in 'T01'?,Pathfinding Queries,neo4j
+What are the top 5 most expensive products based on their pack price?,Pathfinding Queries,neo4j
+Which vendors supply the products under the ANTMs group with the highest pack prices?,Pathfinding Queries,neo4j
+List all products with a line item quantity of 1500 or more that are managed by an office in the US.,Pathfinding Queries,neo4j
+Identify products that have a 'Pre-PQ Process' as their price quote and are associated with the brand 'Aluvia'.,Pathfinding Queries,neo4j
+Which countries receive the most number of products with molecule test type containing 'HIV 1/2'?,Pathfinding Queries,neo4j
+List the sub classes of products managed by the Ethiopia Field Office with a unit of measure per pack of 30.,Pathfinding Queries,neo4j
+Which products grouped under HRDT have a shipment number starting with 'DN'?,Pathfinding Queries,neo4j
+Identify the brands of products that are managed by offices outside of the US.,Pathfinding Queries,neo4j
+How many products with a molecule test type including 'Rapid' are managed by the PMO - US office?,Pathfinding Queries,neo4j
+List the offices that manage products with a price quote status of 'Pre-PQ Process' and a shipment number containing '608'.,Pathfinding Queries,neo4j
+Which vendors are associated with products shipped under shipment number 'ASN-8'?,Pathfinding Queries,neo4j
+What are the names of the product groups for products that have 'Efavirenz' in their item description?,Pathfinding Queries,neo4j
+Identify the countries to which products categorized under the 'Adult' sub class are shipped.,Pathfinding Queries,neo4j
+Show the first 3 products that are linked to the brand name 'Aluvia' and have a unit of measure per pack less than 50.,Pathfinding Queries,neo4j
+Which products have a pack price between $30 and $100 and are managed by an office located in South Africa?,Pathfinding Queries,neo4j
+List the sub classes for products that have a project code starting with '100' and are managed by an office in the US.,Pathfinding Queries,neo4j
+What are the brands associated with products that have a project code '102-NG-T01'?,Pathfinding Queries,neo4j
+Which offices manage products with a molecule test type 'Efavirenz'?,Pathfinding Queries,neo4j
+List all countries where products under the 'HIV test - Ancillary' sub class are sent.,Pathfinding Queries,neo4j
+Which vendors supply products that are part of the 'ARV' group and have a shipment number starting with 'ASN'?,Pathfinding Queries,neo4j
+Find the top 5 most frequently shipped products to Afghanistan.,Pathfinding Queries,neo4j
+Identify the products that have an item description containing 'Rapid Test' and a shipment number 'DN-112'.,Pathfinding Queries,neo4j
+List the product groups associated with products managed by the Haiti Field Office.,Pathfinding Queries,neo4j
+Show the first 3 brands associated with products that have an item description including 'HIV Kit'.,Pathfinding Queries,neo4j
+Which countries receive products from vendors named 'ABBOTT LABORATORIES (PUERTO RICO)'?,Pathfinding Queries,neo4j
+What are the names of products managed by the Ethiopia Field Office with a line item quantity less than 20?,Pathfinding Queries,neo4j
+Which vendors supply products to offices that manage more than 3 different types of product groups?,Pathfinding Queries,neo4j
+List the offices that manage products under the 'Malaria' sub class.,Pathfinding Queries,neo4j
+Identify the brands of products that have a project code ending in 'T01' and are associated with the 'ANTM' group.,Pathfinding Queries,neo4j
+Which countries are linked to products with a shipment number that includes '52'?,Pathfinding Queries,neo4j
+List the products that have a unit of measure per pack of 30 and are managed by the PMO - US office.,Pathfinding Queries,neo4j
+Show the top 3 most expensive products managed by any office based on their pack price.,Pathfinding Queries,neo4j
+What are the names of the products that are part of the 'Pediatric' sub class and have a shipment number 'ASN-608'?,Pathfinding Queries,neo4j
+Which vendors supply products with a pack price less than $50 and are managed by the South Africa Field Office?,Pathfinding Queries,neo4j
+List the names of product groups for products that have a project code '100-HT-T01'.,Pathfinding Queries,neo4j
+Identify the countries where products with a molecule test type containing 'OraQuick' are sent.,Pathfinding Queries,neo4j
+Which offices manage products categorized under the 'HIV test' sub class with a pack price over $200?,Pathfinding Queries,neo4j
+List the brands associated with products that have a shipment number starting with 'DN' and a molecule test type including 'HIV'.,Pathfinding Queries,neo4j
+What are the names of products with a pack price over $150 managed by the Haiti Field Office?,Pathfinding Queries,neo4j
+What are the names of the top 5 brands by the number of products available?,Complex Aggregation Queries,neo4j
+List the top 3 countries with the highest number of products shipped based on the shipment number.,Complex Aggregation Queries,neo4j
+Which vendors supply the top 5 most expensive products based on pack price?,Complex Aggregation Queries,neo4j
+List the top 3 product groups with the most diverse range of item descriptions.,Complex Aggregation Queries,neo4j
+What are the names of the top 5 sub-classes by the variety of molecule test types they include?,Complex Aggregation Queries,neo4j
+Which offices manage the highest number of products in the 'HIV test' sub-class?,Complex Aggregation Queries,neo4j
+What are the top 3 brands that have the most products associated with the 'ACT' product group?,Complex Aggregation Queries,neo4j
+List the top 5 vendors by the number of products with a unit of measure per pack greater than 50.,Complex Aggregation Queries,neo4j
+What are the top 3 offices by the number of products managed with a shipment number starting with 'ASN-'?,Complex Aggregation Queries,neo4j
+Which countries receive products with the highest average pack prices and list the top 3?,Complex Aggregation Queries,neo4j
+What are the names of the top 5 products by line item quantity in the 'ANTM' product group?,Complex Aggregation Queries,neo4j
+List the top 3 highest weight relationships from products to countries.,Complex Aggregation Queries,neo4j
+Which sub-classes have products with a unit of measure per pack of exactly 100 and list the top 5?,Complex Aggregation Queries,neo4j
+What are the top 3 offices managing products with the 'Pre-PQ Process' price quote?,Complex Aggregation Queries,neo4j
+List the top 5 product groups associated with the most brands.,Complex Aggregation Queries,neo4j
+Which brands are linked to products managed by the 'Haiti Field Office' and list the top 3?,Complex Aggregation Queries,neo4j
+What are the top 3 vendors supplying products to 'South Africa Field Office' managed products?,Complex Aggregation Queries,neo4j
+List the top 5 product groups by the average pack price of their products.,Complex Aggregation Queries,neo4j
+Which sub-classes are associated with products having a shipment number starting with 'DN-' and list the top 5?,Complex Aggregation Queries,neo4j
+What are the top 3 countries by the total weight of products shipped to them?,Complex Aggregation Queries,neo4j
+"Which offices manage products with 'HIV 1/2, Determine Complete HIV Kit' as their molecule test type and list the top 3?",Complex Aggregation Queries,neo4j
+List the top 5 products with the highest pack prices in the 'HIV test - Ancillary' sub-class.,Complex Aggregation Queries,neo4j
+What are the names of the top 3 brands with the lowest average pack price per product?,Complex Aggregation Queries,neo4j
+Which vendors supply products with '30 Tests' in their item description and list the top 5?,Complex Aggregation Queries,neo4j
+List the top 5 product groups with products having more than one molecule test type listed.,Complex Aggregation Queries,neo4j
+What are the top 3 sub-classes with the most products having '100-CI-T01' as their project code?,Complex Aggregation Queries,neo4j
+Which offices manage the highest number of products in the 'ARV' product group and list the top 3?,Complex Aggregation Queries,neo4j
+List the top 5 countries receiving products from 'ABBOTT LABORATORIES (PUERTO RICO)' based on the shipment number.,Complex Aggregation Queries,neo4j
+What are the top 3 brands with products having the highest line item quantity?,Complex Aggregation Queries,neo4j
+Which vendors supply products with the 'Pre-PQ Process' price quote and list the top 5?,Complex Aggregation Queries,neo4j
+List the top 5 countries receiving the least quantity of products based on line item quantity.,Complex Aggregation Queries,neo4j
+What are the top 3 product groups by the number of different shipment numbers associated with their products?,Complex Aggregation Queries,neo4j
+Which sub-classes have the most products with a pack price over $100 and list the top 5?,Complex Aggregation Queries,neo4j
+List the top 3 offices managing products with the highest average unit of measure per pack.,Complex Aggregation Queries,neo4j
+What are the names of the top 5 products by pack price in the 'Pediatric' sub-class?,Complex Aggregation Queries,neo4j
+Which vendors supply the most products with the 'HIV test' sub-class and list the top 5?,Complex Aggregation Queries,neo4j
+List the top 5 product groups with the lowest average pack prices.,Complex Aggregation Queries,neo4j
+What are the top 3 sub-classes with the least diversity in molecule test types?,Complex Aggregation Queries,neo4j
+Which offices manage products with the lowest average pack price and list the top 3?,Complex Aggregation Queries,neo4j
+List the top 5 countries receiving products with a shipment number starting with 'DN-'.,Complex Aggregation Queries,neo4j
+Which products have a line item quantity of '10000' and are managed by the PMO - US office?,Verbose query,neo4j
+What are the names of the brands associated with products that have a 'Pre-PQ Process' price quote?,Verbose query,neo4j
+List the names of the sub-classes for products that have a pack price of '80.0'.,Verbose query,neo4j
+Identify the top 3 countries by the total weight of products shipped to them.,Verbose query,neo4j
+Which products are in the 'ARV' product group and have a project code starting with '100'?,Verbose query,neo4j
+"What are the top 5 vendors supplying the 'HIV 1/2, Determine Complete HIV Kit'?",Verbose query,neo4j
+"For products managed by the Haiti Field Office, what are the various product groups they belong to?",Verbose query,neo4j
+List the top 3 product descriptions for products that have been shipped under shipment number 'ASN-608'.,Verbose query,neo4j
+Which offices manage products that are part of the 'Adult' sub-class?,Verbose query,neo4j
+What are the names of the countries associated with products that have a molecule test type containing 'Efavirenz'?,Verbose query,neo4j
+Which products have a unit of measure per pack of '30' and are in the 'HIV test' sub-class?,Verbose query,neo4j
+Name the top 5 products (by pid) that have a 'Pre-PQ Process' price quote and are in the 'Malaria' sub-class.,Verbose query,neo4j
+Identify the brands associated with products that have a pack price over '50.0'.,Verbose query,neo4j
+"Which vendors supply products to the Ethiopia Field Office that have a molecule test type of 'HIV 1/2, Determine Complete HIV Kit'?",Verbose query,neo4j
+List the product groups for the top 3 products with the highest line item quantity.,Verbose query,neo4j
+What are the names of the offices that manage products with a shipment number starting with 'DN'?,Verbose query,neo4j
+Identify the product descriptions for products that are managed by the South Africa Field Office and have a pack price of '29.0'.,Verbose query,neo4j
+Which products have a project code '102-NG-T01' and are associated with the 'ACT' product group?,Verbose query,neo4j
+Name the brands associated with products that have the item description containing 'tablets'.,Verbose query,neo4j
+List the countries where products with a 'HIV test - Ancillary' sub-class are shipped to.,Verbose query,neo4j
