@@ -22,6 +22,14 @@ import matplotlib.pyplot as plt
 
 load_dotenv()
 
+# # List all files in the current directory
+# for file in os.listdir():
+#     # Check if the file ends with .csv
+#     if file.endswith(".csv"):
+#         # Remove the file
+#         os.remove(file)
+#         print(f"Removed: {file}")
+
 # Initialize session state variables
 def initialize_session_state():
     if "chat_history" not in st.session_state:
@@ -85,18 +93,21 @@ def home_page():
 
 # Page to display data table
 def data_table_page():
-    st.title("Data Table Page")
-    df = pd.read_csv(os.getcwd()+"//evaluation_results.csv")
-    df1 = ragas_eval.getEval(df)
-    print(df1)
-    # try:
-    #     df = pd.read_csv(os.getcwd()+"//evaluation_results.csv")
-    #     df = ragas_eval.getEval(df)
-    # except:
-    #     df = pd.DataFrame({"Note : ":"You havent asked any queries yet"},index=[0])
+    # st.title("Data Table Page")
+    st.markdown("# SupplyChainInsights")
+    st.subheader('Performance Metrics')
+    st.text('Find out how good the responses were?')    
+    # df = pd.read_csv(os.getcwd()+"//evaluation_results.csv")
+    # df1 = ragas_eval.getEval(df)
+    # print(df1)
+    try:
+        df = pd.read_csv(os.getcwd()+"//evaluation_results.csv")
+        df = ragas_eval.getEval(df)
+    except:
+        df = pd.DataFrame({"Note : ":"You havent asked any queries yet"},index=[0])
 
-    st.write("Here is how good the responses were")
-    st.dataframe(df1)
+    #st.write("Here is how good the responses were")
+    st.dataframe(df)
         
 def generatePlot(input_data):
     
@@ -204,10 +215,11 @@ def chat_interface_page():
             print("RIGHT BEFORE THE IMAGE")
             generatePlot(response)
         else:
+            text  = response['output']
             st.session_state.messages.append({"role": "assistant", "content": response['output']})
             # Display assistant response in chat message container
             with st.chat_message("assistant"):
-                st.markdown(response)
+                st.markdown(response['output'])
     
     if st.button("Clear Chat History"):
         st.session_state.messages = []

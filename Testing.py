@@ -13,7 +13,7 @@ from modules import utils,ragas_eval
 import pandas as pd
 
 
-a = pd.read_csv(os.getcwd()+"/evaluation_results.csv")
+#a = pd.read_csv(os.getcwd()+"/evaluation_results.csv")
 #utils.graph_init()
-print(ragas_eval.getEval(a))
-#print(utils.chat_bot("Give me All the countries our products get sent to??"))
+#print(ragas_eval.getEval(a))
+print(utils.chat_bot("Help me construct a cypher query to access the count of products per country ??"))

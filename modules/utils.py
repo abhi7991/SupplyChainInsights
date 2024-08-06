@@ -39,7 +39,7 @@ from graphdatascience import GraphDataScience
 wd = os.getcwd()
 from dotenv import load_dotenv
 import graph_build,create_plot_embeddings
-from modules import plot_vector_search,qa_bot,visualiser
+from modules import plot_vector_search,qa_bot,visualiser,generate_cypher
 import openai
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
@@ -104,7 +104,7 @@ def chat_bot(query):
     '''
     Chatbot with functions to answer questions related to the movies
     '''
-    tools=[plot_vector_search.vectorSearch,qa_bot.chat,visualiser.visualise]
+    tools=[plot_vector_search.vectorSearch,qa_bot.chat,visualiser.visualise,generate_cypher.finetuned]
     functions = [format_tool_to_openai_function(f) for f in tools]
     model = ChatOpenAI(temperature=0).bind(functions=functions)
     memory = ConversationBufferMemory(return_messages=True,memory_key="chat_history",run_intermediate_steps=True,return_direct=True)
