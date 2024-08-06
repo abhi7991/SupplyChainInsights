@@ -50,9 +50,9 @@ application. Using custom training data, I hve trained the models on a set of qu
 
 - To facilitate my Fine tuned models I have analysed 4 models which have been used in this analysis (linked to the respective HuggingFace Repo) 
 
-	1. [Phi3](https://huggingface.co/abhi7991/promptFineTuning) - SLM from Microsoft 
-	2. [Llama3 - 8b](https://huggingface.co/abhi7991/promptfinetuning-llama3) - Meta's Open Source Model 
-	3. [Llama3 - 8b (Developed by Neo4j)](https://huggingface.co/collections/tomasonjo/llama3-text2cypher-demo-6647a9eae51e5310c9cfddcf) -  Meta's Open Source Model fine tuned by Neo4j Developers
+1. [Phi3](https://huggingface.co/abhi7991/promptFineTuning) - SLM from Microsoft 
+2. [Llama3 - 8b](https://huggingface.co/abhi7991/promptfinetuning-llama3) - Meta's Open Source Model 
+3. [Llama3 - 8b (Developed by Neo4j)](https://huggingface.co/collections/tomasonjo/llama3-text2cypher-demo-6647a9eae51e5310c9cfddcf) -  Meta's Open Source Model fine tuned by Neo4j Developers
 
 	For my [Phi3](https://huggingface.co/abhi7991/promptFineTuning) and [Llama3 - 8b](https://huggingface.co/abhi7991/promptfinetuning-llama3) models I fine tuned them Using Unsloth 
 
@@ -69,7 +69,7 @@ application. Using custom training data, I hve trained the models on a set of qu
 
 	- [Comparing models Locally](fine_tuning/notebook/Comparing_FineTunedLLMs-Local.ipynb)
 
-	4. [GPT - 3.5](https://platform.openai.com/docs/guides/fine-tuning/analyzing-your-fine-tuned-model)
+4. [GPT - 3.5](https://platform.openai.com/docs/guides/fine-tuning/analyzing-your-fine-tuned-model)
 
 	After several attempts at fine tuning models using Hyperparamater tuning and training data I used OpenAI's services to finetune my model.
 	In this case I used their UI to fine tune my model to see the ease in using GPT. I have highlighted my key takeaways below. 
@@ -87,3 +87,5 @@ application. Using custom training data, I hve trained the models on a set of qu
 
 ## Project Architecture 
 
+
+![alt text](Files/Project_Architecture.png)
