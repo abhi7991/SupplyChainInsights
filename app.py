@@ -243,14 +243,10 @@ def main():
     # Map the selected page to the corresponding function
     if page == "Home":
         home_page()
-    elif page == "Monitor Performance":
-        # st.set_page_config(
-        #     page_title="Metrics of this AI Application",page_icon="\U0001F4E6"+"\U0001F30D" ,layout="wide"
-        # )        
+        page = pages['Question? Chat it out']
+        page()        
+    elif page == "Monitor Performance":     
         data_table_page()
-
-    page = pages['Question? Chat it out']
-    page()
 
 
 if __name__ == "__main__":

@@ -9,6 +9,7 @@
 - [Key Features](#key-features)
 - [About RAG](#about-rag)
 - [About Fine Tuning](#about-fine-tuning)
+- [About Performance Monitoring](#about-performance-monitoring)
 - [Project Architecture](#project-architecture)
 
 ## Overview
@@ -26,6 +27,8 @@ The dataset used in this project provides comprehensive information on supply ch
 - Neo4j Graph Database: Constructs a graph database to model and analyze supply chain relationships.
 - Retrieval-Augmented Generation (RAG): Implements RAG for enhanced data retrieval and user interaction.
 - Fine Tuned Model with Cypher QA Chain trained.
+- Peformance Monitoring using RAGAS framework 
+
 
 **All the features are coordinated by Langchains multi agent tool. Depending on whata the users queries are 
 the right functionality will be executed. This faciliates problem solving on multiple fronts.**
@@ -84,6 +87,11 @@ application. Using custom training data, I hve trained the models on a set of qu
 
     I have integrated this into my application to show how quickly fine tuned GPT models can be intergated into applications. This faciliates the application to generate cypher queries on the fly allowing users to understand and tap into a rich data source
 
+## About Performance Monitoring
+
+[Ragas](https://docs.ragas.io/en/stable/index.html) is a framework that helps you evaluate your Retrieval-Augmented Generation (RAG) pipelines. RAG denotes a class of LLM applications that use external data to augment the LLM’s context. There are existing tools and frameworks that help you build these pipelines, but evaluating and quantifying your pipeline performance can be challenging. This is where Ragas (RAG Assessment) comes in.
+
+Ragas provides a structured approach to evaluating RAG models by offering a variety of metrics that assess different aspects of the model’s performance. By using Ragas, you can gain a detailed understanding of how well your RAG pipeline is performing and identify areas for improvement. The evaluation framework provided here helps in assessing the performance and effectiveness of RAG models in generating accurate and relevant answers by utilizing retrieved contexts.
 
 ## Project Architecture 
 
