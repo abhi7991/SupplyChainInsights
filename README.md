@@ -11,6 +11,7 @@
 - [About Fine Tuning](#about-fine-tuning)
 - [About Performance Monitoring](#about-performance-monitoring)
 - [Project Architecture](#project-architecture)
+- [Setup Instructions](#setup-instructions)
 
 ## Overview
 
@@ -97,3 +98,21 @@ Ragas provides a structured approach to evaluating RAG models by offering a vari
 
 
 ![alt text](Files/Project_Architecture.png)
+
+## Setup Instructions
+
+1) Clone the repo 
+2) Create an .env file with the following variables - 
+
+*Ensure the OpenAI API key is the latest*
+*Download a desktop version of Neo4j*
+```
+NEO4J_URI = ''
+NEO4J_USER = ''
+NEO4J_PASSWORD = ''
+OPENAI_API_KEY=''
+```
+3. Create a new Python environment
+4. Install the requirements.txt associated with the repo.
+5. Ensure you have the dataset downloaded.
+6. run the command  `streamlit run app.py`

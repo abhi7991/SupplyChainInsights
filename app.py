@@ -94,6 +94,8 @@ def home_page():
 # Page to display data table
 def data_table_page():
     # st.title("Data Table Page")
+    image_dir = os.path.join(os.getcwd(), "Files/monitor_Performance.png")
+    st.sidebar.image(image_dir, caption=None, use_column_width=True)    
     st.markdown("# SupplyChainInsights")
     st.subheader('Performance Metrics')
     st.text('Find out how good the responses were?')    
@@ -113,7 +115,7 @@ def generatePlot(input_data):
     
     df = input_data['Data']
     query = input_data['Question']
-    print("Here is the data , /n",df)
+
     plot_type = detect_plot_type(query)
 
     if plot_type==None:
@@ -212,7 +214,6 @@ def chat_interface_page():
             
         response = utils.chat_bot(prompt)   
         if response['Tool'] == 'visualise':
-            print("RIGHT BEFORE THE IMAGE")
             generatePlot(response)
         else:
             text  = response['output']
