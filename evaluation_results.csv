@@ -1,0 +1,18 @@
+question,answer,contexts
+Give me the country we supply thee most products to and the count of the number of products? ,"The country we supply the most products to is South Africa, with a total of 1406 products supplied to that country.",['- South Africa: 1406 products']
+Tell me which are the brands which are shipped to South Africa? ,"The brands that are shipped to South Africa include Retrovir, Generic, Ziagen, Kaletra, Viread, Viramune, Aluvia, Zerit, Invirase, and Norvir.",['- Retrovir\n- Generic\n- Ziagen\n- Kaletra\n- Viread\n- Viramune\n- Aluvia\n- Zerit\n- Invirase\n- Norvir']
+Give me the query to find the countries which the brand genric is available ?,"The query to find the countries where the brand 'genric' is available is:
+
+MATCH (p:Product)-[:WEIGHT]->(c:Country)
+MATCH (p)-[:BRAND]->(:Brand {name: 'genric'})
+RETURN DISTINCT c.name","[""MATCH (p:Product)-[:WEIGHT]->(c:Country)\nMATCH (p)-[:BRAND]->(:Brand {name: 'genric'})\nRETURN DISTINCT c.name""]"
+Give me the query to find the countries which the brand Genric is available ?,"The query to find the countries where the brand 'Generic' is available is:
+```
+MATCH (p:Product)-[:BRAND]->(:Brand {name: 'Generic'})
+MATCH (p)-[:WEIGHT]->(c:Country)
+RETURN DISTINCT c.name
+```","[""MATCH (p:Product)-[:BRAND]->(:Brand {name: 'Generic'})\nMATCH (p)-[:WEIGHT]->(c:Country)\nRETURN DISTINCT c.name""]"
+Give me the plot of the number of products by each brand ?,"I found some product information related to Efavirenz 600mg tablets. Would you like me to provide insights based on this data, or would you like to explore a different dataset or product category?","[""['82897 Efavirenz Efavirenz 600mg, tablets, 30 Tabs', '86294 Efavirenz Efavirenz 600mg, tablets, 30 Tabs']""]"
+I want to see the products which contain 150 mg and 60 tablets ? ,"The products that contain 150 mg and 60 tablets are:
+1. Lamivudine 150mg, tablets, 60 Tabs
+2. Lamivudine 150mg, tablets, 60 Tabs","[""['44964 Lamivudine Lamivudine 150mg, tablets, 60 Tabs', '54676 Lamivudine Lamivudine 150mg, tablets, 60 Tabs']""]"

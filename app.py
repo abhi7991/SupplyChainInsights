@@ -168,11 +168,9 @@ def chat_interface_page():
 
     initialize_session_state()
 
-    st.title("SupplyChainInsights - Clear Insights into Global Health Commodity Trends")
+    #st.title("Clear Insights into Global Health Commodity Trends")
     st.subheader('Access the World Wide Supply Chain of Antiretroviral (ARV) and HIV lab shipments!')
     # Load and display images from local repository
-    image_dir = os.path.join(os.getcwd(), "Files/logo-color.png")
-    st.sidebar.image(image_dir, caption=None, use_column_width=True)
     # display_images_in_sidebar(image_dir)
 
     display_chat_history()
@@ -236,7 +234,8 @@ def main():
     st.set_page_config(
         page_title="SupplyChainInsights",page_icon="\U0001F4E6"+"\U0001F30D" ,layout="wide"
     )
-
+    image_dir = os.path.join(os.getcwd(), "Files/logo-color.png")
+    st.sidebar.image(image_dir, caption=None, use_column_width=True)
     # Sidebar navigation
     st.sidebar.title("Navigation")
     page = st.sidebar.radio("Go to", ["Home", "Monitor Performance"])

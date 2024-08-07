@@ -2,6 +2,10 @@
 
 ![alt text](Files/logo-color.png)
 
+[Video Demonstration of Application](https://www.youtube.com/watch?v=oAhlNXMpGuo)
+
+[Detailed Report of Application](Files/Final_Project_Report.pdf)
+
 ## Table of Contents
 
 - [Overview](#overview)
