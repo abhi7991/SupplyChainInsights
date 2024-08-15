@@ -19,7 +19,7 @@
 - [Project Architecture](#project-architecture)
 - [Setup Instructions](#setup-instructions)
 - [Contact](#contact)
-- 
+
 ## Overview
 
 This repository contains a project focused on analyzing global health commodity supply chains, specifically Antiretroviral (ARV) and HIV lab shipments. The project utilizes neo4j graph databases, advanced graph data science techniques, and retrieval-augmented generation (RAG) for enhanced data exploration and insights. Additionally there is also a Fine tuned model which is produced using Llama3, Unsloth and HuggingFace. Model Fine tuning helps ensure that the data is not compromised by external LLMs and enables to query the data with ease.
@@ -127,4 +127,5 @@ OPENAI_API_KEY=''
 ## Contact
 
 [Linkedin](https://www.linkedin.com/in/abhishekshankar97/)
+
 [Email](mailto:shankar.abhi@northeastern.edu)
