@@ -16,3 +16,29 @@ Give me the plot of the number of products by each brand ?,"I found some product
 I want to see the products which contain 150 mg and 60 tablets ? ,"The products that contain 150 mg and 60 tablets are:
 1. Lamivudine 150mg, tablets, 60 Tabs
 2. Lamivudine 150mg, tablets, 60 Tabs","[""['44964 Lamivudine Lamivudine 150mg, tablets, 60 Tabs', '54676 Lamivudine Lamivudine 150mg, tablets, 60 Tabs']""]"
+Tell me the various countries the office PMO-US Ships to? ,There is no specific information available regarding the countries the office PMO-US ships to.,['Countries the office PMO-US Ships to: \n\n- No information available.']
+Give me the count of the number of brands delivering products across various countries? ,There are no brands delivering products across various countries according to the data in the knowledge graph.,['- There are no brands delivering products across various countries.']
+Give me the count of the number of brand catering to the countries?,There are currently no brands catering to countries in the dataset.,['- There are 0 brands catering to countries.']
+Give me the count of vendors across the various countries? ,"The count of vendors across various countries is as follows:
+- Afghanistan: 2 vendors
+- Angola: 5 vendors
+- Belize: 1 vendor
+- Benin: 4 vendors
+- Botswana: 9 vendors
+- Burkina Faso: 2 vendors
+- Burundi: 4 vendors
+- Cameroon: 12 vendors
+- Congo, DRC: 12 vendors
+- Côte d'Ivoire: 19 vendors","[""- Afghanistan: 2 vendors\n- Angola: 5 vendors\n- Belize: 1 vendor\n- Benin: 4 vendors\n- Botswana: 9 vendors\n- Burkina Faso: 2 vendors\n- Burundi: 4 vendors\n- Cameroon: 12 vendors\n- Congo, DRC: 12 vendors\n- Côte d'Ivoire: 19 vendors""]"
+I want to find the products which contain  150mg of Lamivudine? ,"The products containing 150mg of Lamivudine are:
+1. Lamivudine 150mg tablets, 60 Tabs (Product ID: 84505)
+2. Lamivudine 150mg tablets, 60 Tabs (Product ID: 85257)","[""['84505 Lamivudine Lamivudine 150mg, tablets, 60 Tabs', '85257 Lamivudine Lamivudine 150mg, tablets, 60 Tabs']""]"
+Give me a cypher query to find the products which get shipped to South Africa and their vendors?,"Here is a Cypher query to find the products that get shipped to South Africa and their vendors:
+
+```cypher
+MATCH (p:Product)-[:WEIGHT]->(:Country {name: 'South Africa'})
+MATCH (p)-[:VENDOR]->(v:Vendor)
+RETURN p, v
+``` 
+
+This query will return the products and their respective vendors that are shipped to South Africa.","[""MATCH (p:Product)-[:WEIGHT]->(:Country {name: 'South Africa'})\nMATCH (p)-[:VENDOR]->(v:Vendor)\nRETURN p, v""]"
